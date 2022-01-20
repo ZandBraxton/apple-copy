@@ -48,6 +48,7 @@ table {
 }
 
 *, *::before, *::after {
+    /* outline: 1px solid red; */
     box-sizing: border-box;
 }
 
@@ -78,12 +79,12 @@ nav {
 
 
 
-ul {
+nav ul {
     display: flex;
     flex: 1; 
 }
 
-ul li {
+nav ul li {
     z-index: 9998;
     padding: 10px 20px;
     border-right: 1px solid rgba(0, 0, 0, 0.253);
@@ -94,7 +95,7 @@ ul li {
 
 
 
-ul li:first-child {
+nav ul li:first-child {
     display: block;
     width: 100%;
     background: no-repeat url("Apple_logo_white.png");
@@ -104,7 +105,7 @@ ul li:first-child {
     border-bottom-left-radius: 6px;
 }
 
-ul li:hover {
+nav ul li:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -151,6 +152,7 @@ ul li:hover {
     left: 0;
     bottom: 292px;
     overflow: hidden;
+    z-index: -1;
 }
 
 .hero-bg {
@@ -164,3 +166,96 @@ ul li:hover {
     background-size: 1440px 1315px;
     z-index: -1;
 }
+
+.hero-text-container {
+    height: 100vh;
+    padding: 50px;
+    margin-top: 60px;
+    text-align: center;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+
+}
+
+.hero-text-container h1 {
+    font-size: 62px;
+    width: 60%;
+    font-family: 'Lato', sans-serif;
+    margin: auto auto 10px auto;
+}
+
+.hero-text-container h2 {
+    font-size: 32px;
+    line-height: 50px;
+    font-weight: 600;
+    width: 60%;
+    margin: auto auto 30px auto;
+}
+
+.hero-text-container p {
+    font-size: 20px;
+    font-weight: 600;
+    width: 60%;
+    margin: auto auto auto auto;
+}
+
+
+.img-container {
+    display: flex;
+    width: 1440px;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 90px;
+    margin: auto;
+    margin-left: -720px;
+    
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-nav, .footer-nav-2 {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 2em;
+    width: 1200px;
+}
+
+.footer-nav a, .footer-nav-2 a {
+    color: #0088cc;
+    cursor: pointer;
+}
+
+.footer-nav a:hover, .footer-nav ul li:hover,
+.footer-nav-2 a:hover, .footer-nav-2 ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-nav ul, .footer-nav-2 ul {
+display: flex;
+}
+
+.footer-nav ul li, .footer-nav-2 ul li {
+    color: #0088cc;
+    padding: 6px 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.356);
+    cursor: pointer;
+}
+
+.footer-nav-2 {
+    gap: 0;
+}
+
